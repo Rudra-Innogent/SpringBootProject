@@ -1,15 +1,13 @@
 package com.innogent.SpringProject.Service;
 
-import java.util.List;
-
 import com.innogent.SpringProject.Entity.Student;
+import java.util.List;
 
 public interface StdService {
 
-    public Student insert(Student student);
-    public Student delete(Student student);
-    public Student update(Student student);
-    public List<Student> getAll();
+    Student insert(Student student);
+    Student update(Student student);
+    void deleteById(Integer id);
+    List<Student> getAll();
+    Student getById(Integer id);
 }
-	
-
