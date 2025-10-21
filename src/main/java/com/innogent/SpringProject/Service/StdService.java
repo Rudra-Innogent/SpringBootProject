@@ -1,13 +1,26 @@
 package com.innogent.SpringProject.Service;
 
-import com.innogent.SpringProject.Entity.Student;
-import java.util.List;
+import com.innogent.SpringProject.Entity.*;
+import com.innogent.SpringProject.dto.*;
+import java.util.*;
 
-public interface StdService {
+public interface StdService{
 
-    Student insert(Student student);
-    Student update(Student student);
-    void deleteById(Integer id);
-    List<Student> getAll();
-    Student getById(Integer id);
+    Student create(Student student, Set<String> courseNames);
+
+    StudentResponse updateStudent(StudentRequest request);
+
+    void deleteStudentById(Integer id);
+
+    StudentResponse findStudentById(Integer id);
+
+    List<StudentResponse> findAllStudents();
+     
+    List<Course> getCoursesWithoutStudents();
+    
+    int updateInstructorByCourseId(Long id, String instructor);
+
+    List<Object[]> getCourseWithStudentCount();
+
+    List<Object[]> getTopNCoursesByEnrollment(int n);
 }
