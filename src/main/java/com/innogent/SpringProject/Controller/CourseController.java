@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/course")
@@ -23,5 +24,10 @@ public class CourseController {
     @GetMapping("/getAllCourses")
     public ResponseEntity<List<Course>> getAllCourses() {
         return ResponseEntity.ok(courseService.getAllCourses());
+    }
+    
+    @GetMapping("/findByCourse")
+    public Optional<Course> findByCourseName(@RequestParam String courseName) {
+        return courseService.findByCourseName(courseName);
     }
 }

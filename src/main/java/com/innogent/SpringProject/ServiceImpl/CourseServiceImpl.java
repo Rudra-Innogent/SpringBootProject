@@ -6,6 +6,7 @@ import com.innogent.SpringProject.StudentDAO.CourseDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CourseServiceImpl implements CourseService {
@@ -22,4 +23,9 @@ public class CourseServiceImpl implements CourseService {
     public List<Course> getAllCourses() {
         return courseDao.findAll();
     }
+
+	@Override
+	public Optional<Course> findByCourseName(String courseName) {
+		return courseDao.findByCourseName(courseName);
+	}
 }

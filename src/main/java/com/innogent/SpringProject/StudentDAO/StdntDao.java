@@ -1,21 +1,12 @@
 package com.innogent.SpringProject.StudentDAO;
 
-import com.innogent.SpringProject.Entity.Course;
-import com.innogent.SpringProject.Entity.Student;
-import com.innogent.SpringProject.StudentRepo.CourseRepository;
-import com.innogent.SpringProject.StudentRepo.StdRepository;
-import com.innogent.SpringProject.dto.StudentRequest;
-import com.innogent.SpringProject.dto.StudentResponse;
+import com.innogent.SpringProject.Entity.*;
+import com.innogent.SpringProject.StudentRepo.*;
+import com.innogent.SpringProject.dto.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
+import org.springframework.stereotype.*;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
